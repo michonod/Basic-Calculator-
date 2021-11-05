@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: rgb(218, 228, 228);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+#container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  border: 5px solid #161111;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  margin: 10px;
+}
+
+input[type="text"] {
+  height: 75px;
+  width: 575px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  font-size: 30px;
   color: white;
+  background-color: transparent;
+  text-align: right;
+  letter-spacing: 1.4px;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+#clear {
+  grid-column: 1/3;
+  grid-row: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#equal {
+  grid-column: 3/5;
+  grid-row: 5;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(172, 166, 166);
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.buttonColor {
+  background-color: rgba(88, 228, 60, 0.582);
 }
